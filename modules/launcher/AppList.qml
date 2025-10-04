@@ -52,7 +52,7 @@ StyledListView {
         const text = search.text;
         const prefix = Config.launcher.actionPrefix;
         if (text.startsWith(prefix)) {
-            for (const action of ["calc", "scheme", "variant"])
+            for (const action of ["calc", "scheme", "variant", "install"])
                 if (text.startsWith(`${prefix}${action} `))
                     return action;
 
@@ -106,6 +106,13 @@ StyledListView {
             PropertyChanges {
                 model.values: M3Variants.query(search.text)
                 root.delegate: variantItem
+            }
+        },
+        State {
+            name: "install"
+            PropertyChanges {
+                model.values: Install.query(search.text)
+                root.delegate: installItem
             }
         }
     ]
@@ -251,6 +258,14 @@ StyledListView {
         id: variantItem
 
         VariantItem {
+            list: root
+        }
+    }
+
+    Component {
+        id: installItem
+
+        InstallItem {
             list: root
         }
     }
