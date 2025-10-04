@@ -43,7 +43,7 @@ Searcher {
 
         function onClicked(list: AppList): void {
             list.visibilities.launcher = false;
-            Quickshell.execDetached(["kitty", "--class=dani-config-internal-float", "-c", "open-update-menu", option]);
+            Quickshell.execDetached(["kitty", "--class=dani-config-internal-float", "-e", "open-update-menu", option]);
         }
     }
 }
