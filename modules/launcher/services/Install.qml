@@ -16,19 +16,19 @@ Searcher {
     list: [
         Option {
             option: "pacman"
-            icon: "sentiment_very_dissatisfied"
+            icon: "package_2"
             name: qsTr("Pacman")
             description: qsTr("Install from the Arch Linux official repositories.")
         },
         Option {
             option: "aur"
-            icon: "android"
+            icon: "public"
             name: qsTr("AUR")
             description: qsTr("Install from the Arch User Repository (AUR).")
         },
         Option {
             option: "remove"
-            icon: "compare_arrows"
+            icon: "delete_forever"
             name: qsTr("Remove")
             description: qsTr("Uninstall a package")
         }

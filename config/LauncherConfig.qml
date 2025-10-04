@@ -133,6 +133,14 @@ JsonObject {
             command: ["systemctl", "suspend-then-hibernate"],
             enabled: true,
             dangerous: false
+        },
+        {
+            name: "Packages",
+            icon: "orders",
+            description: "Add or remove packages",
+            command: ["autocomplete", "install"],
+            enabled: true,
+            dangerous: false
         }
     ]
 }
